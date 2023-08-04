@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <!--type: Unkown, Red, Green, Yellow, Red_Left, Green_left-->
+  <!--save path-->
+  <param name="save_static_path" type="str" value="/home/dgist/Downloads/TL" />
+  <!--area filter-->
+  <param name="area_threshold" type="int" value="200" />
+  <!--low confidence filter-->  
+  <param name="confidence_threshold" type="double" value="0.9" />
+  <!--class blance filter-->
+  <param name="Green_num" type="int" value="12673" />
+  <param name="Red_num" type="int" value="10119" />
+  <param name="Yellow_num" type="int" value="2555" />
+  <param name="Green_Left_num" type="int" value="5547" />
+  <param name="Red_Left_num" type="int" value="6017" />
+  <param name="Unknown_num" type="int" value="1958" /> 
+  <param name="target_num" type="int" value="10000" />
+  <param name="min_probability" type="int" value="5" />   
+  <!--프로그램 실행-->
+  <node pkg="roi_image_saver" type="traffic_light_roi_image_saver_node" name="traffic_light_roi_image_saver_node" output="screen">
+  </node>
+</launch>
